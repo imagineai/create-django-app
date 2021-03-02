@@ -1,1 +1,1 @@
-[![test install and code all](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml)
+[![test across OS, package managers and Python versions](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml)
