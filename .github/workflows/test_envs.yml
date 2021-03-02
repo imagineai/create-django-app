@@ -1,4 +1,4 @@
-name: test install and code all
+name: test across OS, package managers and Python versions
 on:
   workflow_dispatch:
 
