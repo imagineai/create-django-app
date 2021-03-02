@@ -27,16 +27,16 @@ jobs:
             ${{ runner.OS }}-
       - name: Install imagine
         run: npm install -g imagine
-      - name: use package manager ${{ matrix.package-manager}}
-        run: ./manager.sh ${{ matrix.package-manager}} todo.im
-      - name: Generate code
-        run: imagine compile todo.im
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+      - name: use package manager ${{ matrix.package-manager}}
+        run: ./manager.sh ${{ matrix.package-manager}} todo.im
       - name: echo package manager
         run: less todo.im | grep package-manager
+      - name: Generate code
+        run: imagine compile todo.im
       - name: install package manager and dependencies
         run: make install
       - name: Lint the files
