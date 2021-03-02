@@ -1,0 +1,1 @@
+[![test install and code all](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml)
