@@ -28,7 +28,7 @@ jobs:
       - name: Install imagine
         run: npm install -g imagine
       - name: use package manager ${{ matrix.package-manager}}
-        run: ./manager.sh ${{ matrix.package-manager}}
+        run: ./manager.sh ${{ matrix.package-manager}} todo.im
       - name: Generate code
         run: imagine compile todo.im
       - name: Set up Python ${{ matrix.python-version }}
