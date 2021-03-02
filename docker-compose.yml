@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/home/app/web/service/static
+    expose:
+      - 8000
+    env_file:
+      - .env.prod
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/home/app/web/service/static
+    ports:
+      - 8080:80
+    depends_on:
+      - web
+
+volumes:
+  static_volume:
