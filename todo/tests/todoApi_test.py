@@ -1,16 +1,19 @@
-import factory
 import json
 import random
+
+import factory
 from faker import Factory
 from graphene_django.utils.testing import GraphQLTestCase
 from graphene_django.utils.utils import camelize
 from graphql_relay import to_global_id
 
-from .factories import TodoFactory
 from todo.models import Todo
 from todo.types import TodoNode
 
+from .factories import TodoFactory
+
 faker = Factory.create()
+
 
 class TodoApi_Test(GraphQLTestCase):
     def setUp(self):
@@ -118,7 +121,6 @@ class TodoApi_Test(GraphQLTestCase):
             new_len = len(todos)
             assert todo_count - i == new_len
 
-
     def test_update_mutation_correct(self):
         """
         Add an object. Call an update with 2 (or more) fields updated.
@@ -165,7 +167,7 @@ class TodoApi_Test(GraphQLTestCase):
         self.assertEquals(updated_todo_data['date'], todo_dict['date'])
         self.assertEquals(updated_todo_data['text'], todo_dict['text'])
         self.assertEquals(updated_todo_data['done'], todo_dict['done'])
-        
+
     def test_update_mutation_date_with_incorrect_value_data_type(self):
         """
         Add an object. Call an update with 2 (or more) fields updated with values that are expected to fail.
@@ -191,6 +193,7 @@ class TodoApi_Test(GraphQLTestCase):
             """
         )
         self.assertResponseHasErrors(response)
+
     def test_update_mutation_text_with_incorrect_value_data_type(self):
         """
         Add an object. Call an update with 2 (or more) fields updated with values that are expected to fail.
@@ -216,6 +219,7 @@ class TodoApi_Test(GraphQLTestCase):
             """
         )
         self.assertResponseHasErrors(response)
+
     def test_update_mutation_done_with_incorrect_value_data_type(self):
         """
         Add an object. Call an update with 2 (or more) fields updated with values that are expected to fail.
@@ -240,4 +244,3 @@ class TodoApi_Test(GraphQLTestCase):
             """
         )
         self.assertResponseHasErrors(response)
-

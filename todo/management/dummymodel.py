@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class DummyModel(models.Model):
     """Model used in the generation of permissions"""
 
@@ -10,4 +11,3 @@ class DummyModel(models.Model):
         # disable "add", "change", "delete"
         # and "view" default permissions
         default_permissions = ()
-

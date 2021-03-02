@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class User(AbstractUser):
     """
     This UserModel is extending the django default UserModel
@@ -9,4 +10,3 @@ class User(AbstractUser):
     the email field is an example.
     """
     email = models.EmailField(max_length=50, unique=True)
-

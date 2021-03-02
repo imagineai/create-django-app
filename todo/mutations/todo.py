@@ -1,15 +1,16 @@
 import graphene
 from graphene import relay
 from graphql_relay import from_global_id
+
 from todo.models import Todo
 from todo.types import TodoNode
+
 
 class TodoData(graphene.InputObjectType):
     id = graphene.Int()
     date = graphene.Date()
     text = graphene.String()
     done = graphene.Boolean()
-
 
 
 class CreateTodo(relay.ClientIDMutation):
@@ -19,13 +20,12 @@ class CreateTodo(relay.ClientIDMutation):
     todo = graphene.Field(TodoNode)
 
     @classmethod
-    def mutate_and_get_payload(cls, root, info, data ):
+    def mutate_and_get_payload(cls, root, info, data):
 
         obj = Todo.objects.create(**data)
 
-
-
         return CreateTodo(todo=obj)
+
 
 class UpdateTodo(relay.ClientIDMutation):
     class Input:
@@ -39,8 +39,8 @@ class UpdateTodo(relay.ClientIDMutation):
 
         obj, _ = Todo.objects.update_or_create(pk=from_global_id(id)[1], defaults=data)
 
-        
         return UpdateTodo(todo=obj)
+
 
 class DeleteTodo(relay.ClientIDMutation):
     class Input:
@@ -53,4 +53,3 @@ class DeleteTodo(relay.ClientIDMutation):
         obj = Todo.objects.get(pk=from_global_id(id)[1])
         obj.delete()
         return DeleteTodo(ok=True)
-

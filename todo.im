@@ -23,7 +23,7 @@ api:
     
 end settings
 
-database demo sqlite3
+database todo sqlite3
 
 # datamodel spec section
 Model Todo {
