@@ -19,4 +19,4 @@ npm install -g imagine && imagine create -f django -n myapp
   - easily change your app settings such as django server and package manager, API format etc.
   - add app functionality such as data models, APIs, storage etc using a simple config spec. 
 
-- Learn more about how you can use Imagine to generate code at [imagine.ai].
+- Learn more about how you can use Imagine to generate code at www.imagine.ai.
