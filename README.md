@@ -90,8 +90,14 @@ database taskmaster-db
 <h3> Easy to customize </h3>
 
 - Not only can you change your app settings easily, you can also generated production-ready code using the `myapp.im` file. 
-- Use Imagine's simple syntax to add [data models](www.imagine.ai/docs/model) and [CRUD APIs]((www.imagine.ai/docs/api) to your Django app. 
+
+
+- Use Imagine's simple syntax to add [data models](www.imagine.ai/docs/model) and [CRUD APIs](www.imagine.ai/docs/api) to your Django app. 
+
+
 - Run `imagine compile myapp.im` to see the generated code (PS - all our generated code has extensive coverage for end-to-end and unit tests).
+
+
 - Enjoy!
 
 
