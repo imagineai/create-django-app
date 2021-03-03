@@ -19,11 +19,11 @@ install:
 dev:
 	pipenv run python manage.py runserver
 
-run:
+run: install
 	# the default settings file is development, it can be changed
 	# for any of the others, please don't use development setting in production
 	export DJANGO_SETTINGS_MODULE='service.settings.development';\
-	pipenv run gunicorn service.wsgi:application --bind 0.0.0.0:8000
+	pipenv run gunicorn service.wsgi:application --bind localhost:8000
 
 shell:
 	@echo 'Starting pipenv shell. Press Ctrl-d to exit from the shell'

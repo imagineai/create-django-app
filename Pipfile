@@ -11,13 +11,15 @@ isort = "*"
 django-stubs = "*"
 mypy = "*"
 factory-boy = "*"
+djangorestframework-stubs = "*"
 
 
 [packages]
 django = "*"
 django-filter = "*"
-graphene-django = "*"
+drf-yasg = "*"
+djangorestframework = "*"
 gunicorn = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.8.2"
