@@ -7,9 +7,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: [3.6, 3.7, 3.8, 3.9]
-        package-manager: [pipenv]
+        package-manager: [pipenv, poetry, virtualenv]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
