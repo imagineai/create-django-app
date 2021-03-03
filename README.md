@@ -103,4 +103,4 @@ database taskmaster-db
 
 - Enjoy!
 
-[![CodeQL](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml) [![test across OS, package managers and Python versions](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml)
+[![CodeQL](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml) [![test across OS, package managers and Python versions](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml) [![codecov](https://codecov.io/gh/imagineai/create-django-app/branch/master/graph/badge.svg?token=5IK4BJB4I3)](https://codecov.io/gh/imagineai/create-django-app)
