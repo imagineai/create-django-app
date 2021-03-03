@@ -2,6 +2,9 @@ name: test across OS, package managers and Python versions
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron:  '0 16 * * *'
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
