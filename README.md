@@ -4,12 +4,12 @@ One-line command to create a Django app with all the dependencies installed.
 
 <h2> Overview </h2>
 
-Run the following command in your terminal:
+- Run the following command in your terminal:
 ```
 npm install -g imagine && imagine create -f django -n myapp 
 ```
 
-(If you don't have npm installed, you'll need to install this first)
+(If you don't have npm installed, you'll need to [install this first](https://docs.npmjs.com/cli/v7/commands/npm-install))
 
 - You can run your new Django app by running `cd myapp && imagine run`. You can open the url http://127.0.0.1:8000/ in your browser - you should see a page that shows the install worked successfully.
 
