@@ -19,7 +19,7 @@ django:
         # name of the project settings directory:
         project-dir: service
 api:
-    format: graphql
+    format: rest
     
 end settings
 
