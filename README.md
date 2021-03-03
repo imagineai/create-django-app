@@ -1,6 +1,8 @@
 <h1> Create Django app using Imagine </h1>
 
-Single line command to create a Django app.
+Single line command to create a Django app with all the dependencies installed. 
+
+<h2> Overview </h2>
 
 Run the following command in your terminal:
 ```
