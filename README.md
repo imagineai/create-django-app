@@ -48,6 +48,7 @@ abc
 - If you want to change any of the above defaults for your app, its a piece of cake.
 - Go to the myapp.im file in your directory, your should see the basic default settings here:
 </br>
+
 ```
 settings
 
@@ -74,9 +75,6 @@ api:
     format: rest
 
 end settings
-
-
-# storage
 
 database taskmaster-db 
 ```
