@@ -15,7 +15,7 @@ npm install -g imagine && imagine create -f django -n myapp
 
 - Congrats! Your Django app is up and running! 
 
-- Now that you've created your new app, check out the myapp.im in your app directory - using this you can easily: 
+- Now that you've created your new app, check out the `myapp.im` in your app directory - using this you can: 
   - easily change your app settings such as django server and package manager, API format etc.
   - add app functionality such as data models, APIs, storage etc using a simple config spec. 
 
