@@ -44,9 +44,10 @@ abc
   - API format:             REST
   - Database:               sqlite
   - Database name:          myapp
-       
 
-<h3> Easy to configure </h3>
+<br/>
+
+<h3> Easy to customize </h3>
 
 - If you want to change any of the above defaults for your app, its a piece of cake.
 
@@ -87,7 +88,9 @@ database taskmaster-db
 - You can replace the default settings with your preferences (based on the options allowed), and then run `imagine compile myapp.im` in your terminal. Your app and will be updated with the new settings
 
 
-<h3> Easy to customize </h3>
+<br/>
+
+<h3> Easy to add app functionality </h3>
 
 - Not only can you change your app settings easily, you can also generated production-ready code using the `myapp.im` file. 
 
