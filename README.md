@@ -1,3 +1,4 @@
+<h1> Create Django app using Imagine </h1>
 
 Single line command to create a Django app.
 
