@@ -15,7 +15,16 @@ npm install -g imagine && imagine create -f django -n myapp
 - You should see this:
 
 ```
-abc
+$ npm install -g imagine && imagine create -f django -n myapp 
+
+changed 214 packages, and audited 215 packages in 5s
+
+found 0 vulnerabilities
+32 files written
+You have successfully created a new project!
+Now you can run "make install && make run" to install the dependencies and open a web server running at
+http://127.0.0.1:8000/
+
 ```
 
 
