@@ -31,12 +31,12 @@ abc
 </br>
 <h2> Detail </h2>
 
-<h3> Easy to start </h3>
+<h3> Easy to create </h3>
 
 - Our one-line command allows your to get started with your Django app immediately, without worrying about installing dependencies or environment variables - we use commonly used env variables to help you get started with your app, so you can focusing on writing business logic.
 
 
-- Our default variables when we create your django app are as follows: 
+- Our default environment variables when we create your django app are as follows: 
   - Server:                 dev
   - Package manager:        pipenv
   - Django models layout:   single-file
@@ -46,7 +46,7 @@ abc
   - Database name:          myapp
        
 
-<h3> Easy to customize </h3>
+<h3> Easy to configure </h3>
 
 - If you want to change any of the above defaults for your app, its a piece of cake.
 
@@ -85,4 +85,13 @@ database taskmaster-db
 ```
   
 - You can replace the default settings with your preferences (based on the options allowed), and then run `imagine compile myapp.im` in your terminal. Your app and will be updated with the new settings
+
+
+<h3> Easy to customize </h3>
+
+- Not only can you change your app settings easily, you can also generated production-ready code using the `myapp.im` file. 
+- Use Imagine's simple syntax to add [data models](www.imagine.ai/docs/model) and [CRUD APIs]((www.imagine.ai/docs/api) to your Django app. 
+- Run `imagine compile myapp.im` to see the generated code (PS - all our generated code has extensive coverage for end-to-end and unit tests).
+- Enjoy!
+
 
