@@ -45,6 +45,7 @@ abc
        
 
 <h3> Easy to customize </h3>
+- Run the following command in your terminal:
 - If you want to change any of the above defaults for your app, its a piece of cake.
 
 - Go to the myapp.im file in your directory, your should see the basic default settings here:
