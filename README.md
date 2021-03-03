@@ -103,4 +103,4 @@ database taskmaster-db
 
 - Enjoy!
 
-
+[![CodeQL](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml)
