@@ -1,6 +1,6 @@
 <h1> Create Django App </h1>
 
-Single line command to create a Django app with all the dependencies installed. 
+One line command to create a Django app with all the dependencies installed. 
 
 <h2> Overview </h2>
 
