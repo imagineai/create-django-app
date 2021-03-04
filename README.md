@@ -3,7 +3,7 @@
 <h1> Create Django App  💛 </h1>
 
 Easy **one-line command** to create a Django app with all the **dependencies auto-installed**, and **built-in support (alpha release) for**:
-  - package managers (**pipenv, poetry**)
+  - package managers (**pipenv, poetry, virtualenv**)
   - web servers (**dev, gunicorn, uwsgi**)
   - connecting to different databases (**MySQL, PostgreSQL, SQLite3**)
   - data model creation
@@ -31,7 +31,7 @@ If you don't have `npm` installed, you'll need to [install this first](https://d
 $ npm install -g imagine && imagine create -f django -n myapp 
 
 changed 214 packages, and audited 215 packages in 5s
-
+....
 found 0 vulnerabilities
 32 files written
 You have successfully created a new project!
@@ -55,7 +55,7 @@ http://127.0.0.1:8000/
 
 <h3> Easy to create </h3>
 
-- Our one-line command allows your to get started with your Django app immediately, without worrying about installing dependencies - we use commonly used dependencies to help you get started with your app, so you can focusing on writing business logic. 
+- Our one-line command allows your to get started with your Django app immediately, without worrying about installing dependencies - we take care of those, so you can focusing on writing business logic. 
 
 
 - Our default settings when we create your django app are as follows: 
@@ -89,7 +89,7 @@ app:
     framework: django
 
 django:
-    # choose one: [pipenv, poetry]
+    # choose one: [pipenv, poetry, virtualenv]
     package-manager: pipenv
     # choose one: [gunicorn, uwsgi, dev]
     server: dev
@@ -106,8 +106,8 @@ api:
 
 end settings
 
-# database <database type: [sqlite, mysql, posgresql]> <database name>
-database sqlite myapp-db 
+# database <database-name> <database type: [sqlite, mysql, posgresql]>
+database myapp-db sqlite3
 
 ```
   
@@ -121,7 +121,7 @@ database sqlite myapp-db
 - Not only can you change your app settings easily, you can also generated production-ready code using the `myapp.im` file. 
 
 
-- Use Imagine's simple syntax to add [data models](www.imagine.ai/docs/model) and [CRUD APIs](www.imagine.ai/docs/api) to your Django app. 
+- Use Imagine's simple syntax to add [data models](https://www.imagine.ai/docs/model) and [CRUD APIs](https://www.imagine.ai/docs/api) to your Django app. 
 
 
 - Run `imagine compile myapp.im` to see the generated code.
@@ -134,4 +134,4 @@ database sqlite myapp-db
 
 - PPS - in this repository, we have included an example to-do app that we created and generated using the `todoapp.im` file. You can check out the `todoapp.im` file that we used to create the Django app and express the specifications for the data models and APIs, as well as all the Django code files that are generated when you run `imagine compile todoapp.im`.
 
-- Have fun! 💛
+- We are curious to see what can you build with Imagine. Have fun! 💛
