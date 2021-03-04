@@ -39,6 +39,7 @@ Now you can run "cd myapp && imagine run" to install the dependencies and open a
 http://127.0.0.1:8000/
 ```
 <br/>
+
 - Run `cd myapp && imagine run` to run your new Django app, and open http://127.0.0.1:8000/ to see that the install worked successfully.
 
 - Congrats! Your Django app is up and running!
