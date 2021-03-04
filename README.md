@@ -53,7 +53,7 @@ http://127.0.0.1:8000/
 
 <h3> Easy to create </h3>
 
-- Our one-line command allows your to get started with your Django app immediately, without worrying about installing dependencies - we use commonly used dependencies to help you get started with your app, so you can focusing on writing business logic. Don't worry, you can always change the settings to your preferences later (see the next section: "Easy to customize").
+- Our one-line command allows your to get started with your Django app immediately, without worrying about installing dependencies - we use commonly used dependencies to help you get started with your app, so you can focusing on writing business logic. 
 
 
 - Our default settings when we create your django app are as follows: 
@@ -63,7 +63,9 @@ http://127.0.0.1:8000/
   - Project directory name: microservice
   - API format:             REST
   - Database:               sqlite
-  - Database name:          myapp
+  - Database name:          myapp-db
+
+- These aren't the exact settings you want? No sweat, you can always change the settings as per your preferences - read on to see how to do this.
 
 <br/>
 
