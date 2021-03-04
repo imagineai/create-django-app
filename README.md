@@ -134,4 +134,4 @@ database myapp-db sqlite3
 
 - PPS - in this repository, we have included an example to-do app that we created and generated using the `todoapp.im` file. You can check out the `todoapp.im` file that we used to create the Django app and express the specifications for the data models and APIs, as well as all the Django code files that are generated when you run `imagine compile todoapp.im`.
 
-- We are curious to see what can you build with Imagine. Have fun! 💛
+- Have fun! 💛
