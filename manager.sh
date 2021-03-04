@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -i.bak '13s/.*/    package-manager: '$1'/' $2
+sed -i.bak '11s/.*/    package-manager: '$1'/' $2
