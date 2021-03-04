@@ -29,6 +29,8 @@ jobs:
         run: ./manager.sh ${{ matrix.package-manager}} myapp.im
       - name: echo package manager
         run: less myapp.im | grep package-manager
+      - name: echo myapp.im
+        run: cat myapp.im
       - name: Generate code
         run: imagine compile myapp.im
       - name: install package manager and dependencies
