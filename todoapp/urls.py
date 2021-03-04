@@ -12,7 +12,7 @@ router.register(r'todo_api', TodoApiViewSet, 'todo_api')
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="myapp",
+        title="todoapp",
         default_version='v1',
         description="API description",
     ),

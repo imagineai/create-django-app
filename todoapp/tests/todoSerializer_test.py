@@ -3,8 +3,7 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework import serializers
 from rest_framework.test import APIRequestFactory
-
-from myapp.serializers import TodoSerializer
+from todoapp.serializers import TodoSerializer
 
 from .factories import TodoFactory
 

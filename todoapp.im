@@ -2,7 +2,7 @@ settings
 
 app:
     # your application name
-    name: myapp
+    name: todoapp
     # choose one: [django, node]
     framework: django
 
@@ -26,7 +26,7 @@ end settings
 
 
 # database <database <database name> type: [sqlite, mysql, posgresql]>
-database myapp-db sqlite3
+database todoapp-db sqlite3
 
 
 # datamodel spec section

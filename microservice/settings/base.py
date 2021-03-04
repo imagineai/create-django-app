@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 INSTALLED_APPS = [
-    'myapp.apps.MyappConfig',
+    'todoapp.apps.TodoappConfig',
     'rest_framework',
     'drf_yasg',
     'django.contrib.admin',
@@ -60,7 +60,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
 
-        'NAME': BASE_DIR / 'myapp-db',
+        'NAME': BASE_DIR / 'todoapp-db',
 
     }
 }
@@ -85,7 +85,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-AUTH_USER_MODEL = 'myapp.User'
+AUTH_USER_MODEL = 'todoapp.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

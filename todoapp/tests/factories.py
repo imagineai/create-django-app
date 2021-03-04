@@ -4,8 +4,7 @@ import factory
 from factory import LazyAttribute, LazyFunction, SubFactory, fuzzy
 from factory.django import DjangoModelFactory
 from faker import Factory
-
-from myapp.models import Todo, User
+from todoapp.models import Todo, User
 
 faker = Factory.create()
 

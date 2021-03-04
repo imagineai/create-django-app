@@ -30,11 +30,11 @@ lint:
 	# starts a pipenv shell, shows autopep8 diff and then fixes the files
 	# does the same for isort
 	@echo '---Running autopep8---'
-	pipenv run autopep8 myapp -r -d
-	pipenv run autopep8 myapp -r -i
+	pipenv run autopep8 todoapp -r -d
+	pipenv run autopep8 todoapp -r -i
 	@echo '---Running isort---'
-	pipenv run isort myapp --diff
-	pipenv run isort myapp --atomic
+	pipenv run isort todoapp --diff
+	pipenv run isort todoapp --atomic
 
 coverage:
 	@echo 'Running tests and making coverage files'
