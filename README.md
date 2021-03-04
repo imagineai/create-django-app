@@ -24,6 +24,7 @@ npm install -g imagine && imagine create -f django -n myapp
 If you don't have `npm` installed, you'll need to [install this first](https://docs.npmjs.com/cli/v7/commands/npm-install).
 
 <br/>
+
 - You should see this:
 
 ```
