@@ -102,7 +102,9 @@ api:
 
 end settings
 
-database taskmaster-db 
+# <database type: [sqlite, mysql, posgresql]> <database name>
+sqlite myapp-db 
+
 ```
   
 - You can replace the default settings with your preferences (based on the options allowed), and then run `imagine compile myapp.im` in your terminal. Your app and will be updated with the new settings
