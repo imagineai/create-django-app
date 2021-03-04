@@ -19,7 +19,6 @@ django = "*"
 django-filter = "*"
 drf-yasg = "*"
 djangorestframework = "*"
-gunicorn = "*"
 
 [requires]
 python_version = "3.8.2"

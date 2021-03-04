@@ -1,0 +1,47 @@
+settings
+
+app:
+    # your application name
+    name: myapp
+    # choose one: [django, node]
+    framework: django
+
+django:
+    # choose one: [pipenv, poetry, virtualenv]
+    package-manager: pipenv
+    # choose one: [gunicorn, uwsgi, dev]
+    server: dev
+
+    layout:
+        # choose one: [single-file, separate-files]
+        models: single-file
+        # name of the project settings directory:
+        project-dir: microservice
+
+api:
+    # choose one: [rest, graphql]
+    format: rest
+
+end settings
+
+
+# database <database <database name> type: [sqlite, mysql, posgresql]>
+database myapp-db sqlite3
+
+
+# datamodel spec section
+Model Todo {
+      id   integer [primarykey, default auto-increment]
+      title string [maxlength 255, not-null]
+      description string [maxlength 1024]
+      due_date datetime [default now]
+      done boolean
+}
+
+
+# api spec section
+API todo_api {
+    model        Todo
+    actions      CRUD
+    permissions  []
+}

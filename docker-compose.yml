@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - static_volume:/home/app/web/service/static
+      - static_volume:/home/app/web/microservice/static
     expose:
       - 8000
     env_file:
@@ -14,7 +14,7 @@ services:
   nginx:
     build: ./nginx
     volumes:
-      - static_volume:/home/app/web/service/static
+      - static_volume:/home/app/web/microservice/static
     ports:
       - 8080:80
     depends_on:

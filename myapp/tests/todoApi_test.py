@@ -39,7 +39,7 @@ class TodoApi_Test(TestCase):
         assert Todo.objects.count() == todo_count + 1
         todo = Todo.objects.get(pk=created_todo_pk)
 
-        assert todo_dict['date'] == str(todo.date)
+        assert todo_dict['due_date'] == str(todo.due_date)
 
     def test_fetch_all(self):
         """
@@ -76,34 +76,22 @@ class TodoApi_Test(TestCase):
         response = client.patch(todo_detail_url, data=todo_dict)
         assert response.status_code == status.HTTP_200_OK
 
-        assert todo_dict['id'] == response.data['id']
-        assert todo_dict['date'] == response.data['date']
-        assert todo_dict['text'] == response.data['text']
+        assert todo_dict['title'] == response.data['title']
+        assert todo_dict['description'] == response.data['description']
+        assert todo_dict['due_date'] == response.data['due_date']
         assert todo_dict['done'] == response.data['done']
 
-    def test_update_id_with_incorrect_value_data_type(self):
+    def test_update_due_date_with_incorrect_value_data_type(self):
         client = self.authenticated_api_client
         todo = Todo.objects.first()
         todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
-        todo_id = todo.id
+        todo_due_date = todo.due_date
         data = {
-            'id': faker.pystr(),
+            'due_date': faker.pystr(),
         }
         response = client.patch(todo_detail_url, data=data)
         assert response.status_code == status.HTTP_400_BAD_REQUEST
-        assert todo_id == Todo.objects.first().id
-
-    def test_update_date_with_incorrect_value_data_type(self):
-        client = self.authenticated_api_client
-        todo = Todo.objects.first()
-        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
-        todo_date = todo.date
-        data = {
-            'date': faker.pystr(),
-        }
-        response = client.patch(todo_detail_url, data=data)
-        assert response.status_code == status.HTTP_400_BAD_REQUEST
-        assert todo_date == Todo.objects.first().date
+        assert todo_due_date == Todo.objects.first().due_date
 
     def test_update_done_with_incorrect_value_data_type(self):
         client = self.authenticated_api_client
@@ -117,14 +105,26 @@ class TodoApi_Test(TestCase):
         assert response.status_code == status.HTTP_400_BAD_REQUEST
         assert todo_done == Todo.objects.first().done
 
-    def test_update_text_with_incorrect_value_outside_constraints(self):
+    def test_update_title_with_incorrect_value_outside_constraints(self):
         client = self.authenticated_api_client
         todo = Todo.objects.first()
         todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
-        todo_text = todo.text
+        todo_title = todo.title
         data = {
-            'text': faker.pystr(min_chars=256, max_chars=256),
+            'title': faker.pystr(min_chars=256, max_chars=256),
         }
         response = client.patch(todo_detail_url, data=data)
         assert response.status_code == status.HTTP_400_BAD_REQUEST
-        assert todo_text == Todo.objects.first().text
+        assert todo_title == Todo.objects.first().title
+
+    def test_update_description_with_incorrect_value_outside_constraints(self):
+        client = self.authenticated_api_client
+        todo = Todo.objects.first()
+        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
+        todo_description = todo.description
+        data = {
+            'description': faker.pystr(min_chars=1025, max_chars=1025),
+        }
+        response = client.patch(todo_detail_url, data=data)
+        assert response.status_code == status.HTTP_400_BAD_REQUEST
+        assert todo_description == Todo.objects.first().description

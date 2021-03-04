@@ -4,7 +4,7 @@ from django.urls import reverse
 from rest_framework import serializers
 from rest_framework.test import APIRequestFactory
 
-from todo.serializers import TodoSerializer
+from myapp.serializers import TodoSerializer
 
 from .factories import TodoFactory
 
@@ -20,6 +20,7 @@ class TodoSerializer_Test(TestCase):
         serialized_todo = serializer(todo).data
 
         assert serialized_todo['id'] == todo.id
-        assert serialized_todo['text'] == todo.text
+        assert serialized_todo['title'] == todo.title
+        assert serialized_todo['description'] == todo.description
         assert serialized_todo['done'] == todo.done
-        assert serialized_todo['date'] == str(todo.date)
+        assert serialized_todo['due_date'] == str(todo.due_date)

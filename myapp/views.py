@@ -8,4 +8,4 @@ class TodoApiViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     permission_classes = []
-    filterset_fields = ['id', 'date', 'text', 'done']
+    filterset_fields = ['id', 'title', 'description', 'due_date', 'done']

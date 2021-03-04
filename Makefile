@@ -20,10 +20,7 @@ dev:
 	pipenv run python manage.py runserver
 
 run: install
-	# the default settings file is development, it can be changed
-	# for any of the others, please don't use development setting in production
-	export DJANGO_SETTINGS_MODULE='service.settings.development';\
-	pipenv run gunicorn service.wsgi:application --bind localhost:8000
+	pipenv run python manage.py runserver
 
 shell:
 	@echo 'Starting pipenv shell. Press Ctrl-d to exit from the shell'
@@ -33,11 +30,11 @@ lint:
 	# starts a pipenv shell, shows autopep8 diff and then fixes the files
 	# does the same for isort
 	@echo '---Running autopep8---'
-	pipenv run autopep8 todo -r -d
-	pipenv run autopep8 todo -r -i
+	pipenv run autopep8 myapp -r -d
+	pipenv run autopep8 myapp -r -i
 	@echo '---Running isort---'
-	pipenv run isort todo --diff
-	pipenv run isort todo --atomic
+	pipenv run isort myapp --diff
+	pipenv run isort myapp --atomic
 
 coverage:
 	@echo 'Running tests and making coverage files'
