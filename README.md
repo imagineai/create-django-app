@@ -45,8 +45,8 @@ http://127.0.0.1:8000/
 - **Congrats! Your Django app is up and running!**
 
 - Now that you've created your new app, **check out the `myapp.im` in your app directory** - using this you can: 
-  - easily change your app settings such as django server, package manager, API format, database etc.
-  - auto-generate code for data models, CRUD APIs etc using our simple config spec. 
+  - easily change your app settings such as Django server, package manager, API format, database etc.
+  - generate code for data models, CRUD APIs etc using our simple config spec. 
 
 - Continue reading to learn more, or check out www.imagine.ai.
 
@@ -58,7 +58,7 @@ http://127.0.0.1:8000/
 - Our one-line command allows your to get started with your Django app immediately, without worrying about installing dependencies - we take care of those, so you can focusing on writing business logic. 
 
 
-- Our default settings when we create your django app are as follows: 
+- Our default settings when we create your Django app are as follows: 
   - Server:                 dev
   - Package manager:        pipenv
   - Django models layout:   single-file
@@ -121,7 +121,7 @@ database myapp-db sqlite3
 - Not only can you change your app settings easily, you can also generated production-ready code using the `myapp.im` file. 
 
 
-- Use Imagine's simple syntax to add [data models](https://www.imagine.ai/docs/model) and [CRUD APIs](https://www.imagine.ai/docs/api) to your Django app. 
+- Use Imagine's simple syntax to generate code for [data models](https://www.imagine.ai/docs/model) and [CRUD APIs](https://www.imagine.ai/docs/api) to your Django app. 
 
 
 - Run `imagine compile myapp.im` to see the generated code.
