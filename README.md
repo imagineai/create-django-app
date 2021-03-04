@@ -17,7 +17,7 @@ Easy **one-line command** to create a Django app with all the **dependencies aut
 
 <h2> Overview </h2>
 
-- To create your new Django app, run the following command in your terminal:
+- To create your new Django app, **run the following command**:
 ```
 npm install -g imagine && imagine create -f django -n myapp 
 ```
@@ -42,9 +42,9 @@ http://127.0.0.1:8000/
 
 - Run `cd myapp && imagine run` to run your new Django app, and open http://127.0.0.1:8000/ to see that the install worked successfully.
 
-- Congrats! Your Django app is up and running!
+- **Congrats! Your Django app is up and running!**
 
-- Now that you've created your new app, check out the `myapp.im` in your app directory - using this you can: 
+- Now that you've created your new app, **check out the `myapp.im` in your app directory** - using this you can: 
   - easily change your app settings such as django server, package manager, API format, database etc.
   - auto-generate code for data models, CRUD APIs etc using our simple config spec. 
 
