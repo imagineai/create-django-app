@@ -2,8 +2,8 @@
 
 <h1> Create Django App  💛 </h1>
 
-Easy **one-line command** to:
-- create a Django app with all the **dependencies auto-installed**, and
+Easy **one-line command** to create a Django app with:
+- all the **dependencies auto-installed**, and
 - **built-in support [alpha release] for**:
   - package managers (**pipenv, poetry**)
   - web servers (**dev, gunicorn, uwsgi**)
