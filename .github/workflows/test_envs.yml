@@ -26,11 +26,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: use package manager ${{ matrix.package-manager}}
-        run: ./.manager.sh ${{ matrix.package-manager}} myapp.im
+        run: ./.manager.sh ${{ matrix.package-manager}} todoapp.im
       - name: echo package manager
-        run: less myapp.im | grep package-manager
+        run: less todoapp.im | grep package-manager
       - name: Generate code
-        run: imagine compile myapp.im
+        run: imagine compile todoapp.im
       - name: install package manager and dependencies
         run: make install
       - name: Lint the files
