@@ -64,7 +64,7 @@ http://127.0.0.1:8000/
   - Django models layout:   single-file
   - Project directory name: microservice
   - API format:             REST
-  - Database:               sqlite
+  - Database:               sqlite3
   - Database name:          myapp-db
 
 - These aren't the exact settings you want? No sweat, you can always change the settings as per your preferences - read on to see how to do this.
