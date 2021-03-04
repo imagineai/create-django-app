@@ -17,7 +17,7 @@ Easy **one-line command** to create a Django app with all the **dependencies aut
 
 <h2> Overview </h2>
 
-- To create your new Django app, **run the following command**:
+- **Run the following command** to create your new Django app:
 ```
 npm install -g imagine && imagine create -f django -n myapp 
 ```
