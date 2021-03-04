@@ -42,13 +42,13 @@ http://127.0.0.1:8000/
 - Congrats! Your Django app is up and running!
 
 - Now that you've created your new app, check out the `myapp.im` in your app directory - using this you can: 
-  - easily change your app settings such as django server and package manager, API format etc.
-  - add app functionality such as data models, APIs, storage etc using a simple config spec. 
+  - easily change your app settings such as django server, package manager, API format, database etc.
+  - auto-generate code for data models, CRUD APIs etc using our simple config spec. 
 
-- Learn more about how you can use Imagine to generate code at www.imagine.ai.
+- Continue reading to learn more, or check out www.imagine.ai.
 
 </br>
-<h2> Detail </h2>
+<h2> Learn more </h2>
 
 <h3> Easy to create </h3>
 
