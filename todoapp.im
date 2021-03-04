@@ -31,17 +31,56 @@ database todoapp-db sqlite3
 
 # datamodel spec section
 Model Todo {
-      id   integer [primarykey, default auto-increment]
-      title string [maxlength 255, not-null]
-      description string [maxlength 1024]
-      due_date datetime [default now]
-      done boolean
+    id   integer [primarykey, default auto-increment]
+    title string [maxlength 255, not-null]
+    description string [maxlength 1024]
+    due_date datetime [default now]
+    done boolean
+}
+
+Model Comment {
+    id   integer [primarykey, default auto-increment]
+    message string [maxlength 512]
+    submitted datetime [default now]
+    status string [choice ["read", "unread"] ]
+}
+
+Relation todo_comments {
+    many comments from Comment
+    one todo from Todo
+}
+
+Model Person {
+    id   integer [primarykey, default auto-increment]
+    email  string [maxlength 100]
+    firstname   string [maxlength 100]
+    lastname   string [maxlength 100]
+    last_login datetime [default now]
+}
+
+Relation todo_assignee {
+    many todos from Todo
+    one assignee from Person
 }
 
 
 # api spec section
-API todo_api {
+API /todo {
     model        Todo
     actions      CRUD
     permissions  []
+    filter [done]
 }
+
+API /comment {
+    model       Comment
+    actions     CRUD
+    filter [status]
+}
+
+API /create_person {
+    model       Person
+    actions     [Create]
+}
+
+

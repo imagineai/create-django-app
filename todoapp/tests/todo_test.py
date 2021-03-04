@@ -9,16 +9,17 @@ from rest_framework import status
 from rest_framework.test import APIClient
 
 from ..models import Todo
-from .factories import TodoFactory
+from .factories import CommentFactory, PersonFactory, TodoFactory
 from .utils import generate_authenticated_api_client, generate_user
 
 faker = Factory.create()
 
 
-class TodoApi_Test(TestCase):
+class Todo_Test(TestCase):
     def setUp(self):
         self.api_client = APIClient()
         TodoFactory.create_batch(size=3)
+        self.assignee = PersonFactory.create()
         management.call_command("initialize")
         self.authenticated_api_client = generate_authenticated_api_client(
             generate_user(
@@ -32,8 +33,8 @@ class TodoApi_Test(TestCase):
         """
         client = self.authenticated_api_client
         todo_count = Todo.objects.count()
-        todo_dict = factory.build(dict, FACTORY_CLASS=TodoFactory)
-        response = client.post(reverse('todo_api-list'), todo_dict)
+        todo_dict = factory.build(dict, FACTORY_CLASS=TodoFactory, assignee=self.assignee.pk)
+        response = client.post(reverse('todo-list'), todo_dict)
         created_todo_pk = response.data['id']
         assert response.status_code == status.HTTP_201_CREATED
         assert Todo.objects.count() == todo_count + 1
@@ -46,7 +47,7 @@ class TodoApi_Test(TestCase):
         Create 3 objects, do a fetch all call and check if you get back 3 objects
         """
         client = self.authenticated_api_client
-        response = client.get(reverse('todo_api-list'))
+        response = client.get(reverse('todo-list'))
         assert response.status_code == status.HTTP_200_OK
         assert Todo.objects.count() == len(response.data)
 
@@ -60,7 +61,7 @@ class TodoApi_Test(TestCase):
         todo_count = Todo.objects.count()
 
         for i, todo in enumerate(todo_qs, start=1):
-            response = client.delete(reverse('todo_api-detail', kwargs={'pk': todo.pk}))
+            response = client.delete(reverse('todo-detail', kwargs={'pk': todo.pk}))
             assert response.status_code == status.HTTP_204_NO_CONTENT
             assert todo_count - i == Todo.objects.count()
 
@@ -71,8 +72,8 @@ class TodoApi_Test(TestCase):
         """
         client = self.authenticated_api_client
         todo_pk = Todo.objects.first().pk
-        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo_pk})
-        todo_dict = factory.build(dict, FACTORY_CLASS=TodoFactory)
+        todo_detail_url = reverse('todo-detail', kwargs={'pk': todo_pk})
+        todo_dict = factory.build(dict, FACTORY_CLASS=TodoFactory, assignee=self.assignee.pk)
         response = client.patch(todo_detail_url, data=todo_dict)
         assert response.status_code == status.HTTP_200_OK
 
@@ -84,7 +85,7 @@ class TodoApi_Test(TestCase):
     def test_update_due_date_with_incorrect_value_data_type(self):
         client = self.authenticated_api_client
         todo = Todo.objects.first()
-        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
+        todo_detail_url = reverse('todo-detail', kwargs={'pk': todo.pk})
         todo_due_date = todo.due_date
         data = {
             'due_date': faker.pystr(),
@@ -96,7 +97,7 @@ class TodoApi_Test(TestCase):
     def test_update_done_with_incorrect_value_data_type(self):
         client = self.authenticated_api_client
         todo = Todo.objects.first()
-        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
+        todo_detail_url = reverse('todo-detail', kwargs={'pk': todo.pk})
         todo_done = todo.done
         data = {
             'done': faker.pystr(),
@@ -108,7 +109,7 @@ class TodoApi_Test(TestCase):
     def test_update_title_with_incorrect_value_outside_constraints(self):
         client = self.authenticated_api_client
         todo = Todo.objects.first()
-        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
+        todo_detail_url = reverse('todo-detail', kwargs={'pk': todo.pk})
         todo_title = todo.title
         data = {
             'title': faker.pystr(min_chars=256, max_chars=256),
@@ -120,7 +121,7 @@ class TodoApi_Test(TestCase):
     def test_update_description_with_incorrect_value_outside_constraints(self):
         client = self.authenticated_api_client
         todo = Todo.objects.first()
-        todo_detail_url = reverse('todo_api-detail', kwargs={'pk': todo.pk})
+        todo_detail_url = reverse('todo-detail', kwargs={'pk': todo.pk})
         todo_description = todo.description
         data = {
             'description': faker.pystr(min_chars=1025, max_chars=1025),

@@ -4,11 +4,13 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.routers import DefaultRouter
 
-from .views import TodoApiViewSet
+from .views import CommentViewSet, CreatePersonViewSet, TodoViewSet
 
 router = DefaultRouter()
 
-router.register(r'todo_api', TodoApiViewSet, 'todo_api')
+router.register(r'todo', TodoViewSet, 'todo')
+router.register(r'comment', CommentViewSet, 'comment')
+router.register(r'create_person', CreatePersonViewSet, 'create_person')
 
 schema_view = get_schema_view(
     openapi.Info(
