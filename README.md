@@ -2,13 +2,15 @@
 
 <h1> Create Django App  💛 </h1>
 
-We're a Django project starter on steroids! 
+> We're a Django project starter on steroids! 
+
+<br/>
 
 **One-line command** to create a Django app with all the **dependencies auto-installed**
 <br/>
 AND
 <br/>
-**Easy config (alpha release) to generate Django code for**:
+**Easy config (alpha release) to generate Django code** for:
   - setting up package managers (**pipenv, poetry, virtualenv**)
   - setting web servers (**dev, gunicorn, uwsgi**)
   - connecting to different databases (**MySQL, PostgreSQL, SQLite3**)
@@ -21,7 +23,7 @@ AND
 
 <br/>
 
-<h2> Overview </h2>
+<h2> Quick start </h2>
 
 - **Run the following command** to create your new Django app:
 ```
