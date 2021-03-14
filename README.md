@@ -1,4 +1,5 @@
-[![CodeQL](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml) [![codecov](https://codecov.io/gh/imagineai/create-django-app/branch/master/graph/badge.svg?token=5IK4BJB4I3)](https://codecov.io/gh/imagineai/create-django-app) [![test across OS, package managers and Python versions](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml) 
+[![CodeQL](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/codeql-analysis.yml) [![codecov](https://codecov.io/gh/imagineai/create-django-app/branch/master/graph/badge.svg?token=5IK4BJB4I3)](https://codecov.io/gh/imagineai/create-django-app) [![test across OS, package managers and Python versions](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml/badge.svg)](https://github.com/imagineai/create-django-app/actions/workflows/test_envs.yml)
+<a href="https://discord.gg/vBPpJkS"><img src="https://img.shields.io/badge/chat-discord-brightgreen.svg?logo=discord&style=flat"></a>
 
 <h1> Create Django App  💛 </h1>
 
