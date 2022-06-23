@@ -1,5 +1,5 @@
 all:
-	@echo "Available commands: \n\
+	@printf "Available commands: \n\
 		make install : to install pipenv and other dependent packages \n\
 		make superuser : creates a superuser to access the django admin \n\
 		make dev : runs django development server \n\
